@@ -17,8 +17,5 @@
     "fs": "^0.0.1-security",
     "get-random-values": "^2.0.0",
     "mime": "^3.0.0"
-  },
-  "overrides": {
-    "aws-amplify": "5.0.14"
   }
 }
