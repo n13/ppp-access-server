@@ -1,0 +1,89 @@
+{
+    "test": {
+        "AWS": {
+            "Auth": {
+                "region": "us-east-1",
+                "userPoolId": "us-east-1_BNGTP2fup",
+                "userPoolWebClientId": "6mufhii0pab2392b6muvtiv8k8",
+                "identityPoolId": "us-east-1:b57a53c2-f77d-44d5-9656-15b40da6004d"
+            },
+            "Storage": {
+                "AWSS3": {
+                    "region": "us-east-1",
+                    "bucket": "ppp-service-dev-attachmentsbucket-81z543wrbts3"
+                }
+            },
+            "API": {
+                "endpoints": [
+                    {
+                        "name": "profileApi",
+                        "endpoint": "https://nfjlqism6i.execute-api.us-east-1.amazonaws.com/dev"
+                    }
+                ]
+            }
+        },
+        "loginContract": "logintester1",
+        "loginAction": "loginuser",
+        "logoutAction": "deletelogin",
+        "maxImageSize": "1000000",
+        "imageTypes": "image/png, image/jpeg"
+    },
+    "eos": {
+        "AWS": {
+            "Auth": {
+                "region": "us-east-1",
+                "userPoolId": "us-east-1_lgd67Lgcq",
+                "userPoolWebClientId": "498nk7ee6mjqt62n55rmka6e68",
+                "identityPoolId": "us-east-1:940e4c1b-2456-4c41-95eb-10a2b5982592"
+            },
+            "Storage": {
+                "AWSS3": {
+                    "region": "us-east-1",
+                    "bucket": "ppp-service-eosmain-attachmentsbucket-1lau7ad0pzcslI"
+                }
+            },
+            "API": {
+                "endpoints": [
+                    {
+                        "name": "profileApi",
+                        "endpoint": "https://m7asrw9a9h.execute-api.us-east-1.amazonaws.com/eosMain"
+                    }
+                ]
+            }
+        },
+        "loginContract": "logintohypha",
+        "loginAction": "loginuser",
+        "logoutAction": "logoutuser",
+        "maxImageSize": "1000000",
+        "imageTypes": "image/png, image/jpeg"
+    },
+    "prod": {
+        "AWS": {
+            "Auth": {
+                "region": "us-east-1",
+                "userPoolId": "us-east-1_9voNzsQ2J",
+                "userPoolWebClientId": "6a2p1a1jsei5ttp3t3vro1f0c5",
+                "identityPoolId": "us-east-1:58bf768c-7607-41eb-b512-78314549d61b"
+            },
+            "Storage": {
+                "AWSS3": {
+                    "region": "us-east-1",
+                    "bucket": "ppp-service-prod-attachmentsbucket-1qc5rzodik7x6"
+                }
+            },
+            "API": {
+                "endpoints": [
+                    {
+                        "name": "profileApi",
+                        "endpoint": "https://ttac1sv2yj.execute-api.us-east-1.amazonaws.com/prod"
+                    }
+                ]
+            }
+        },
+        "loginContract": "eosio.login",
+        "loginAction": "loginuser",
+        "logoutAction": "deletelogin",
+        "maxImageSize": "1000000",
+        "imageTypes": "image/png, image/jpeg"
+    }
+}
