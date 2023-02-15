@@ -19,15 +19,16 @@ fastify.get('/profile/:account', async (request, reply) => {
 fastify.post('/profiles', async (request, reply) => {
   const { eosAccounts } = request.body;
   const profileApi = PPP.profileApi();
-  const profiles = await profileApi.getProfiles(eosAccounts);
-  return { profiles };
+  const res = await profileApi.getProfiles(eosAccounts);
+  return { res };
 });
 
 fastify.post('/search', async (request, reply) => {
-  const { eosAccounts } = request.body;
+  console.log("SEARCH " + JSON.stringify(request.body))
+  const { search, limit, lastEvaluatedKey } = request.body;
   const profileApi = PPP.profileApi();
-  const profiles = await profileApi.getProfiles(eosAccounts);
-  return { profiles };
+  const res = await profileApi.searchProfiles(search, limit, lastEvaluatedKey);
+  return res.items;
 });
 
 
