@@ -29,6 +29,15 @@ curl --location --request POST 'http://HOST:PORT/profiles' \
     "eosAccounts":["illumination"]
 }'
 ```
+
+## resolve images
+
+Images are either avatar or cover as image ID, and with the s3 id, they can be resolved here
+
+```
+curl --location --request GET 'http://localhost:9109/getImageUrl/<s3Identity>/<avatar>'
+```
+
 ## search profiles
 ```
 curl --location --request POST 'http://HOST:PORT/search' \
