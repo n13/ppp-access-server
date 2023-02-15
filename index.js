@@ -24,13 +24,20 @@ fastify.post('/profiles', async (request, reply) => {
 });
 
 fastify.post('/search', async (request, reply) => {
-  console.log("SEARCH " + JSON.stringify(request.body))
   const { search, limit, lastEvaluatedKey } = request.body;
   const profileApi = PPP.profileApi();
   const res = await profileApi.searchProfiles(search, limit, lastEvaluatedKey);
   return res.items;
 });
 
+fastify.get('/getImageUrl/:image/:s3Identity', async (request, reply) => {
+  const { image, s3Identity } = request.params;
+  console.log("get image " + JSON.stringify({ image, s3Identity }))
+  const profileApi = PPP.profileApi();
+  const res = await profileApi.getImageUrl(image, s3Identity);
+  console.log("res: " + JSON.stringify(res, null, 2))
+  return res;
+});
 
 const start = async () => {
   try {
