@@ -13,7 +13,9 @@ fastify.get('/profile/:account', async (request, reply) => {
   const { account } = request.params;
   const profileApi = PPP.profileApi();
   const res = await profileApi.getProfiles([account]);
-  return res[account]
+  var profile = res[account]
+  profile = await addUrls(profile)
+  return profile
 });
 
 fastify.post('/profiles', async (request, reply) => {
@@ -29,6 +31,19 @@ fastify.post('/search', async (request, reply) => {
   const res = await profileApi.searchProfiles(search, limit, lastEvaluatedKey);
   return res.items;
 });
+
+const addUrls = async (profileObj) => {
+  const profileApi = PPP.profileApi();
+  if (profileObj.publicData) {
+    if (profileObj.publicData.avatar) {
+      profileObj.avatarUrl = await profileApi.getImageUrl(profileObj.publicData.avatar, profileObj.publicData.s3Identity);
+    }
+    if (profileObj.publicData.cover) {
+      profileObj.coverUrl = await profileApi.getImageUrl(profileObj.publicData.cover, profileObj.publicData.s3Identity);
+    }  
+  }
+  return profileObj
+}
 
 fastify.get('/getImageUrl/:s3Identity/:image', async (request, reply) => {
   const { image, s3Identity } = request.params;
