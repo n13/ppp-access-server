@@ -35,7 +35,7 @@ curl --location --request POST 'http://HOST:PORT/profiles' \
 Images are either avatar or cover as image ID, and with the s3 id, they can be resolved here
 
 ```
-curl --location --request GET 'http://localhost:9109/getImageUrl/<s3Identity>/<avatar>'
+curl --location --request GET 'http://HOST:PORT/getImageUrl/<s3Identity>/<avatar>'
 ```
 
 returns: Image URL
