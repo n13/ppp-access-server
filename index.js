@@ -30,7 +30,7 @@ fastify.post('/search', async (request, reply) => {
   return res.items;
 });
 
-fastify.get('/getImageUrl/:image/:s3Identity', async (request, reply) => {
+fastify.get('/getImageUrl/:s3Identity/:image', async (request, reply) => {
   const { image, s3Identity } = request.params;
   console.log("get image " + JSON.stringify({ image, s3Identity }))
   const profileApi = PPP.profileApi();
