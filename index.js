@@ -14,6 +14,9 @@ fastify.get('/profile/:account', async (request, reply) => {
   const profileApi = PPP.profileApi();
   const res = await profileApi.getProfiles([account]);
   var profile = res[account]
+  if (!profile) {
+    return reply.status(404).send("No profile found: "+account)
+  }
   profile = await addUrls(profile)
   return profile
 });
