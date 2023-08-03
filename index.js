@@ -1,6 +1,8 @@
 import Fastify from 'fastify';
 import PPP from './src/PPP.js'
-require('dotenv').config()
+// require('dotenv').config()
+import { config } from 'dotenv';
+config();
 
 const fastify = Fastify({
   logger: true,
@@ -68,7 +70,7 @@ const start = async () => {
     PPP.configure(environment)
 
     await fastify.listen({ port, host: '0.0.0.0' }, () =>
-      console.log('SERVER for ' + environment + 'LISTENING AT PORT : ' + port)
+      console.log('Server for ' + environment + ' listening at port : ' + port)
     );
   } catch (err) {
     fastify.log.error(err);
