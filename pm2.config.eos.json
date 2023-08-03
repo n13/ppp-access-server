@@ -1,0 +1,10 @@
+{
+    "name": "ppp-access-eos",
+    "script": "index.js",
+    "instances": 1,
+    "env": {
+      "ENVIRONMENT": "eos",
+      "PORT": 9111
+    },
+    "watch": false
+  }

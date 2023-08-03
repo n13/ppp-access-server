@@ -1,0 +1,10 @@
+{
+    "name": "ppp-access-eosTest",
+    "script": "index.js",
+    "instances": 1,
+    "env": {
+      "ENVIRONMENT": "eosTestNet",
+      "PORT": 9112
+    },
+    "watch": false
+  }
