@@ -29,6 +29,7 @@
     },
     "eos": {
         "AWS": {
+            "originAppId": "base-app",
             "Auth": {
                 "region": "us-east-1",
                 "userPoolId": "us-east-1_lgd67Lgcq",
