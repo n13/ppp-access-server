@@ -1,0 +1,10 @@
+{
+    "name": "ppp-access-test",
+    "script": "index.js",
+    "instances": 1,
+    "env": {
+      "ENVIRONMENT": "prod",
+      "PORT": 9109
+    },
+    "watch": false
+  }
