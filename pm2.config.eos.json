@@ -2,6 +2,7 @@
     "name": "ppp-access-eos",
     "script": "index.js",
     "instances": 1,
+    "exec_mode": "fork",
     "env": {
       "ENVIRONMENT": "eos",
       "PORT": 9111

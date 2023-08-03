@@ -2,6 +2,7 @@
     "name": "ppp-access-eosTest",
     "script": "index.js",
     "instances": 1,
+    "exec_mode": "fork",
     "env": {
       "ENVIRONMENT": "eosTestNet",
       "PORT": 9112
