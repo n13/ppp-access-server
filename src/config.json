@@ -85,5 +85,35 @@
         "logoutAction": "deletelogin",
         "maxImageSize": "1000000",
         "imageTypes": "image/png, image/jpeg"
+    },
+    "eosTestNet": {
+        "AWS": {
+            "originAppId": "base-app",
+            "Auth": {
+                "region": "us-east-1",
+                "userPoolId": "us-east-1_lgd67Lgcq",
+                "userPoolWebClientId": "498nk7ee6mjqt62n55rmka6e68",
+                "identityPoolId": "us-east-1:940e4c1b-2456-4c41-95eb-10a2b5982592"
+            },
+            "Storage": {
+                "AWSS3": {
+                    "region": "us-east-1",
+                    "bucket": "ppp-service-eosmain-attachmentsbucket-1lau7ad0pzcslI"
+                }
+            },
+            "API": {
+                "endpoints": [
+                    {
+                        "name": "profileApi",
+                        "endpoint": "https://m7asrw9a9h.execute-api.us-east-1.amazonaws.com/eosMain"
+                    }
+                ]
+            }
+        },
+        "loginContract": "logintohypha",
+        "loginAction": "loginuser",
+        "logoutAction": "logoutuser",
+        "maxImageSize": "1000000",
+        "imageTypes": "image/png, image/jpeg"
     }
 }
