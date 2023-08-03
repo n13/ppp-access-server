@@ -10,6 +10,9 @@ npm i
 npm run start
 ```
 
+# pm2 configs
+There are pm2 configurations for all 4 supported networks to run on different ports. Use these to run the app remotely.
+
 ## get profile
 
 get a profile (public data only)
