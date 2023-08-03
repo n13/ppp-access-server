@@ -68,7 +68,7 @@ const start = async () => {
     PPP.configure(environment)
 
     await fastify.listen({ port, host: '0.0.0.0' }, () =>
-      console.log('SERVER LISTENING AT PORT : ' + port)
+      console.log('SERVER for ' + environment + 'LISTENING AT PORT : ' + port)
     );
   } catch (err) {
     fastify.log.error(err);
