@@ -1,5 +1,6 @@
 import Fastify from 'fastify';
 import PPP from './src/PPP.js'
+require('dotenv').config()
 
 const fastify = Fastify({
   logger: true,
@@ -60,11 +61,12 @@ fastify.get('/getImageUrl/:s3Identity/:image', async (request, reply) => {
 const start = async () => {
   try {
 
-    // PPP setup
-    PPP.configure('prod')
+    const environment = process.env.ENVIRONMENT || 'prod'
+    const port = process.env.PORT || 9109;
 
-    // fastify setup
-    const port = process.env.port || 9109;
+    // PPP setup
+    PPP.configure(environment)
+
     await fastify.listen({ port, host: '0.0.0.0' }, () =>
       console.log('SERVER LISTENING AT PORT : ' + port)
     );
