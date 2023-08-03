@@ -1,30 +1,29 @@
 {
     "test": {
         "AWS": {
+            "originAppId": "47f595b0-272d-11ea-9aa4-6f2f7a0e2550",
             "Auth": {
                 "region": "us-east-1",
-                "userPoolId": "us-east-1_BNGTP2fup",
-                "userPoolWebClientId": "6mufhii0pab2392b6muvtiv8k8",
-                "identityPoolId": "us-east-1:b57a53c2-f77d-44d5-9656-15b40da6004d"
+                "userPoolId": "us-east-1_gd8OvMUK6",
+                "userPoolWebClientId": "7teoo5g0smkmcv5nbnc5k0je1i",
+                "identityPoolId": "us-east-1:d12d4fad-28f0-4fa6-ac6c-d07329f1107c"
             },
             "Storage": {
                 "AWSS3": {
                     "region": "us-east-1",
-                    "bucket": "ppp-service-dev-attachmentsbucket-81z543wrbts3"
+                    "bucket": "ppp-service-dev-attachmentsbucket-1mf7xzdc3x721"
                 }
             },
             "API": {
                 "endpoints": [
                     {
                         "name": "profileApi",
-                        "endpoint": "https://nfjlqism6i.execute-api.us-east-1.amazonaws.com/dev"
+                        "endpoint": "https://qberjy1f98.execute-api.us-east-1.amazonaws.com/dev"
                     }
                 ]
             }
         },
         "loginContract": "logintester1",
-        "loginAction": "loginuser",
-        "logoutAction": "deletelogin",
         "maxImageSize": "1000000",
         "imageTypes": "image/png, image/jpeg"
     },
